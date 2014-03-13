@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>282D0C37-CE51-44ED-9C4B-97BC492C9344</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>Updater</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System" />
+    <Reference Include="FAUtils" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DotfuscatorAttribute.cs" />
+    <Compile Include="eval_a.cs" />
+    <Compile Include="eval_ar.cs" />
+    <Compile Include="eval_bt.cs" />
+    <Compile Include="eval_bu.cs" />
+    <Compile Include="eval_ce.cs" />
+    <Compile Include="eval_cj.cs" />
+    <Compile Include="eval_g.cs" />
+    <Compile Include="eval_m.cs" />
+    <Compile Include="eval_n.cs" />
+    <Compile Include="eval_p.cs" />
+    <Compile Include="eval_y.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="eval_bt.resources" />
+    <EmbeddedResource Include="eval_ce.resources" />
+    <EmbeddedResource Include="eval_cj.resources" />
+    <EmbeddedResource Include="eval_m.resources" />
+    <EmbeddedResource Include="eval_p.resources" />
+    <EmbeddedResource Include="eval_y.resources" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
